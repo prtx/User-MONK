@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Monk(models.Model):
 
 	user = models.OneToOneField(User)
-	image = models.FileField(upload_to='display_picture')
+	image = models.FileField(upload_to='display_picture', null=True)
 
 	def __str__(self):
 		return self.user.username
